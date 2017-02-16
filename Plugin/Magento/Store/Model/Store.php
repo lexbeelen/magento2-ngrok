@@ -15,7 +15,8 @@ class Store
      *
      * @return string
      */
-    protected function getProtocol() {
+    protected function getProtocol()
+    {
         return
             (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
             || $_SERVER['SERVER_PORT'] == 443 ? 'https://' : 'http://';
@@ -36,4 +37,3 @@ class Store
         return $result;
     }
 }
-
