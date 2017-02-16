@@ -8,6 +8,7 @@
         }
     ],
     "license": "MIT",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "LexBeelen\\Ngrok\\": ""
