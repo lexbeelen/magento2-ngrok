@@ -1,0 +1,19 @@
+{
+    "name": "lexbeelen/magento2-ngrok",
+    "description": "Magento 2 ngrok",
+    "authors": [
+        {
+            "name": "Lex Beelen",
+            "email": "lex@lexbeelen.nl"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LexBeelen\\Ngrok\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
