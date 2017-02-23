@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+SOURCE="${BASH_SOURCE[0]}"
+
+DIR=$(php -r "echo dirname(realpath('$SOURCE'));")
+
+DOMAIN=$(php "$DIR/cli/domain.php")
+
+sudo -u $(logname) "$DIR/bin/ngrok" http "$DOMAIN:80" -host-header=rewrite ${*:2}
