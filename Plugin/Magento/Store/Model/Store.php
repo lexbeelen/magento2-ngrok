@@ -29,7 +29,7 @@ class Store
      */
     public function afterGetBaseUrl(\Magento\Store\Model\Store $subject, $result)
     {
-        if (strpos($_SERVER['HTTP_HOST'], self::NGROK_URL) && in_array($result, array($subject->getConfig($subject::XML_PATH_SECURE_BASE_URL), $subject->getConfig($subject::XML_PATH_UNSECURE_BASE_URL))))
+        if (isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'], self::NGROK_URL) && in_array($result, array($subject->getConfig($subject::XML_PATH_SECURE_BASE_URL), $subject->getConfig($subject::XML_PATH_UNSECURE_BASE_URL))))
         {
             return $this->getProtocol() . $_SERVER['HTTP_HOST'] . DIRECTORY_SEPARATOR;
         }
