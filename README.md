@@ -2,7 +2,7 @@
 
 ## Installation
 
-1. `composer require lexbeelen/magento2-ngrok`
+1. `composer require-dev lexbeelen/magento2-ngrok`
 2. Run `bin/magento setup:upgrade`
 
 ---
